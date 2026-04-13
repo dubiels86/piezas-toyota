@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piezas de Motor Toyota - 2L, 2LII, 3L, 5L, 1C, 2C y más</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <style>
+        :root {
+            --toyota-red: #EB0A1E;
+            --toyota-red-dark: #B8000F;
+            --toyota-red-light: #FF2D3B;
+            --dark: #0F0F0F;
+            --dark-2: #1A1A1A;
+            --dark-3: #242424;
+            --dark-4: #2E2E2E;
+            --gray-1: #3A3A3A;
+            --gray-2: #6B6B6B;
+            --gray-3: #9A9A9A;
+            --light-1: #D4D4D4;
+            --light-2: #E8E8E8;
+            --light-3: #F5F5F5;
+            --white: #FFFFFF;
+            --whatsapp: #25D366;
+            --whatsapp-dark: #1DA851;
+            --accent-gold: #F5A623;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--dark);
+            color: var(--light-1);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* HERO */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-2) 50%, #1a0a0a 100%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -30%;
+            width: 80%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(235,10,30,0.08) 0%, transparent 70%);
+            animation: heroGlow 8s ease-in-out infinite alternate;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 200px;
+            background: linear-gradient(to top, var(--dark), transparent);
+            z-index: 2;
+        }
+
+        @keyframes heroGlow {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(-5%, 5%) scale(1.1); }
+        }
+
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(235,10,30,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(235,10,30,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            padding: 2rem;
+            max-width: 900px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(235,10,30,0.1);
+            border: 1px solid rgba(235,10,30,0.3);
+            border-radius: 50px;
+            padding: 8px 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--toyota-red-light);
+            margin-bottom: 2rem;
+            animation: fadeUp 0.8s ease-out;
+        }
+
+        .hero-badge .dot {
+            width: 6px;
+            height: 6px;
+            background: var(--toyota-red);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.5); }
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 7vw, 5rem);
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.5rem;
+            animation: fadeUp 0.8s ease-out 0.1s both;
+        }
+
+        .hero-title .red {
+            color: var(--toyota-red);
+        }
+
+        .hero-title .outline {
+            -webkit-text-stroke: 2px var(--light-1);
+            color: transparent;
+        }
+
+        .hero-engines {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 2rem;
+            animation: fadeUp 0.8s ease-out 0.2s both;
+        }
+
+        .engine-tag {
+            background: var(--dark-3);
+            border: 1px solid var(--gray-1);
+            border-radius: 8px;
+            padding: 8px 18px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: 0.05em;
+            transition: all 0.3s;
+        }
+
+        .engine-tag:hover {
+            border-color: var(--toyota-red);
+            background: rgba(235,10,30,0.1);
+            color: var(--toyota-red-light);
+            transform: translateY(-2px);
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--gray-3);
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+            animation: fadeUp 0.8s ease-out 0.3s both;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            animation: fadeUp 0.8s ease-out 0.4s both;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .btn-whatsapp {
+            background: var(--whatsapp);
+            color: var(--white);
+            box-shadow: 0 4px 20px rgba(37,211,102,0.3);
+        }
+
+        .btn-whatsapp:hover {
+            background: var(--whatsapp-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(37,211,102,0.4);
+        }
+
+        .btn-primary {
+            background: var(--toyota-red);
+            color: var(--white);
+            box-shadow: 0 4px 20px rgba(235,10,30,0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--toyota-red-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(235,10,30,0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--light-1);
+            border: 1px solid var(--gray-1);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--toyota-red);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: var(--gray-3);
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+
+        /* STATS BAR */
+        .stats-bar {
+            background: var(--dark-2);
+            border-top: 1px solid var(--dark-3);
+            border-bottom: 1px solid var(--dark-3);
+            padding: 2rem 1rem;
+        }
+
+        .stats-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--toyota-red);
+            line-height: 1;
+        }
+
+        .stat-item p {
+            font-size: 0.8rem;
+            color: var(--gray-3);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: 6px;
+        }
+
+        /* SEARCH & FILTER SECTION */
+        .controls-section {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(15,15,15,0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--dark-3);
+            padding: 16px 1rem;
+            transition: box-shadow 0.3s;
+        }
+
+        .controls-section.scrolled {
+            box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+        }
+
+        .controls-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .search-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 250px;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 16px 12px 48px;
+            background: var(--dark-3);
+            border: 1px solid var(--dark-4);
+            border-radius: 12px;
+            color: var(--white);
+            font-size: 0.95rem;
+            font-family: 'Inter', sans-serif;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        .search-box input::placeholder {
+            color: var(--gray-2);
+        }
+
+        .search-box input:focus {
+            border-color: var(--toyota-red);
+            box-shadow: 0 0 0 3px rgba(235,10,30,0.15);
+        }
+
+        .search-box .search-icon {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray-2);
+            font-size: 1.2rem;
+        }
+
+        .filter-chips {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .filter-chip {
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid var(--dark-4);
+            background: var(--dark-3);
+            color: var(--gray-3);
+            font-family: 'Inter', sans-serif;
+            white-space: nowrap;
+        }
+
+        .filter-chip:hover {
+            border-color: var(--gray-1);
+            color: var(--light-1);
+        }
+
+        .filter-chip.active {
+            background: var(--toyota-red);
+            border-color: var(--toyota-red);
+            color: var(--white);
+        }
+
+        .results-count {
+            font-size: 0.85rem;
+            color: var(--gray-3);
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .results-count span {
+            color: var(--white);
+            font-weight: 700;
+        }
+
+        /* PARTS CATALOG */
+        .catalog {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem 4rem;
+        }
+
+        .category-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--dark-3);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .category-header:hover {
+            border-color: var(--toyota-red);
+        }
+
+        .category-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: rgba(235,10,30,0.1);
+            border: 1px solid rgba(235,10,30,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--toyota-red);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .category-header h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--white);
+            flex: 1;
+        }
+
+        .category-header .part-count {
+            font-size: 0.75rem;
+            color: var(--gray-3);
+            background: var(--dark-3);
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+
+        .category-header .toggle-icon {
+            color: var(--gray-3);
+            transition: transform 0.3s;
+            font-size: 1.2rem;
+        }
+
+        .category-header.collapsed .toggle-icon {
+            transform: rotate(-90deg);
+        }
+
+        .parts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 10px;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+
+        .parts-grid.collapsed {
+            max-height: 0 !important;
+        }
+
+        .part-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 14px 18px;
+            background: var(--dark-2);
+            border: 1px solid var(--dark-3);
+            border-radius: 12px;
+            transition: all 0.3s;
+            cursor: default;
+        }
+
+        .part-card:hover {
+            border-color: rgba(235,10,30,0.3);
+            background: var(--dark-3);
+            transform: translateX(4px);
+        }
+
+        .part-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .part-name {
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: var(--light-1);
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .part-engine-tag {
+            display: inline-block;
+            font-size: 0.65rem;
+            font-weight: 700;
+            color: var(--toyota-red);
+            background: rgba(235,10,30,0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-top: 4px;
+            letter-spacing: 0.05em;
+        }
+
+        .part-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 4px;
+            flex-shrink: 0;
+        }
+
+        .part-price {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .part-price-label {
+            font-size: 0.65rem;
+            color: var(--gray-3);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .part-card .whatsapp-mini {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: var(--whatsapp);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            flex-shrink: 0;
+            text-decoration: none;
+        }
+
+        .part-card .whatsapp-mini:hover {
+            background: var(--whatsapp-dark);
+            transform: scale(1.1);
+        }
+
+        /* NO RESULTS */
+        .no-results {
+            text-align: center;
+            padding: 4rem 2rem;
+            display: none;
+        }
+
+        .no-results.visible {
+            display: block;
+        }
+
+        .no-results .icon {
+            font-size: 4rem;
+            color: var(--gray-1);
+            margin-bottom: 1rem;
+        }
+
+        .no-results h3 {
+            font-size: 1.3rem;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .no-results p {
+            color: var(--gray-3);
+            font-size: 0.95rem;
+        }
+
+        /* FLOATING WHATSAPP */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .floating-whatsapp a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: var(--whatsapp);
+            border-radius: 50%;
+            color: var(--white);
+            font-size: 1.8rem;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+            transition: all 0.3s;
+            animation: floatPulse 3s infinite;
+        }
+
+        .floating-whatsapp a:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(37,211,102,0.6);
+        }
+
+        @keyframes floatPulse {
+            0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); }
+            50% { box-shadow: 0 4px 30px rgba(37,211,102,0.6), 0 0 0 10px rgba(37,211,102,0.1); }
+        }
+
+        .floating-label {
+            background: var(--dark-3);
+            border: 1px solid var(--dark-4);
+            color: var(--white);
+            padding: 10px 18px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            white-space: nowrap;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            pointer-events: none;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: var(--dark-2);
+            border-top: 1px solid var(--dark-3);
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .footer p {
+            color: var(--gray-3);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer .price-note {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(245,166,35,0.1);
+            border: 1px solid rgba(245,166,35,0.2);
+            border-radius: 12px;
+            padding: 12px 24px;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        .footer .contact-row {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        /* TOAST */
+        .toast {
+            position: fixed;
+            bottom: 100px;
+            right: 24px;
+            z-index: 1000;
+            background: var(--dark-3);
+            border: 1px solid var(--dark-4);
+            color: var(--white);
+            padding: 14px 24px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            transform: translateX(120%);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .toast.show {
+            transform: translateX(0);
+        }
+
+        .toast .toast-icon {
+            color: var(--whatsapp);
+            font-size: 1.2rem;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .parts-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 320px;
+                justify-content: center;
+            }
+
+            .floating-label {
+                display: none;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .stat-item h3 {
+                font-size: 1.5rem;
+            }
+
+            .search-row {
+                flex-direction: column;
+            }
+
+            .filter-chips {
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                padding-bottom: 4px;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .filter-chips::-webkit-scrollbar {
+                height: 0;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .part-card {
+                padding: 12px 14px;
+            }
+
+            .part-name {
+                font-size: 0.82rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-grid"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="dot"></span>
+                Stock Disponible
+            </div>
+            <h1 class="hero-title">
+                PIEZAS <span class="red">TOYOTA</span><br>
+                <span class="outline">MOTOR DIESEL</span>
+            </h1>
+            <div class="hero-engines">
+                <span class="engine-tag">2L</span>
+                <span class="engine-tag">2L-II</span>
+                <span class="engine-tag">3L</span>
+                <span class="engine-tag">5L</span>
+                <span class="engine-tag">1C</span>
+                <span class="engine-tag">2C</span>
+                <span class="engine-tag">14B</span>
+                <span class="engine-tag">1HZ</span>
+                <span class="engine-tag">1KZTE</span>
+            </div>
+            <p class="hero-subtitle">
+                Repuestos para Toyota Hilux, Coaster, Hiace y más. Precios en USD — Negociables según cantidades.
+            </p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/5352643984?text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre%20piezas%20de%20motor%20Toyota" target="_blank" class="btn btn-whatsapp">
+                    <span class="iconify" data-icon="mdi:whatsapp" data-width="22"></span>
+                    WhatsApp +53 52643984
+                </a>
+                <a href="#catalogo" class="btn btn-outline">
+                    <span class="iconify" data-icon="mdi:magnify" data-width="20"></span>
+                    Ver Catálogo
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span class="iconify" data-icon="mdi:chevron-down" data-width="20"></span>
+            Scroll
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <div class="stats-bar">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3 id="totalParts">0</h3>
+                <p>Piezas en stock</p>
+            </div>
+            <div class="stat-item">
+                <h3>9+</h3>
+                <p>Modelos de motor</p>
+            </div>
+            <div class="stat-item">
+                <h3>USD</h3>
+                <p>Precios negociables</p>
+            </div>
+            <div class="stat-item">
+                <h3>24/7</h3>
+                <p>WhatsApp directo</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTROLS -->
+    <div class="controls-section" id="controlsSection">
+        <div class="controls-inner">
+            <div class="search-row">
+                <div class="search-box">
+                    <span class="iconify search-icon" data-icon="mdi:magnify"></span>
+                    <input type="text" id="searchInput" placeholder="Buscar pieza, motor o modelo...">
+                </div>
+                <div class="results-count">
+                    <span id="visibleCount">0</span> resultados
+                </div>
+            </div>
+            <div class="filter-chips" id="filterChips">
+                <button class="filter-chip active" data-filter="all">Todos</button>
+                <button class="filter-chip" data-filter="14B">14B</button>
+                <button class="filter-chip" data-filter="1C">1C</button>
+                <button class="filter-chip" data-filter="2C">2C</button>
+                <button class="filter-chip" data-filter="2L">2L</button>
+                <button class="filter-chip" data-filter="2LII">2L-II</button>
+                <button class="filter-chip" data-filter="3L">3L</button>
+                <button class="filter-chip" data-filter="5L">5L</button>
+                <button class="filter-chip" data-filter="1HZ">1HZ</button>
+                <button class="filter-chip" data-filter="1KZTE">1KZTE</button>
+                <button class="filter-chip" data-filter="HILUX">Hilux</button>
+                <button class="filter-chip" data-filter="HIACE">Hiace</button>
+                <button class="filter-chip" data-filter="COASTER">Coaster</button>
+                <button class="filter-chip" data-filter="OTROS">Otros</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CATALOG -->
+    <div class="catalog" id="catalogo">
+        <div id="catalogContainer"></div>
+        <div class="no-results" id="noResults">
+            <div class="icon">
+                <span class="iconify" data-icon="mdi:engine-off-outline" data-width="64"></span>
+            </div>
+            <h3>Sin resultados</h3>
+            <p>Intenta con otro término de búsqueda o cambia el filtro.</p>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>¿Necesitas algo específico?</h3>
+            <p>Escríbenos por WhatsApp con la pieza y el motor que buscas. Podemos conseguir lo que necesites.</p>
+            <div class="price-note">
+                <span class="iconify" data-icon="mdi:tag-outline" data-width="20"></span>
+                Precios negociables dependiendo de las cantidades
+            </div>
+            <div class="contact-row">
+                <a href="https://wa.me/5352643984?text=Hola%2C%20necesito%20cotizar%20piezas%20de%20motor%20Toyota" target="_blank" class="btn btn-whatsapp">
+                    <span class="iconify" data-icon="mdi:whatsapp" data-width="20"></span>
+                    +53 52643984
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP -->
+    <div class="floating-whatsapp">
+        <div class="floating-label">Escríbenos ahora</div>
+        <a href="https://wa.me/5352643984?text=Hola%2C%20vengo%20del%20anuncio%20de%20piezas%20Toyota" target="_blank" title="WhatsApp">
+            <span class="iconify" data-icon="mdi:whatsapp"></span>
+        </a>
+    </div>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast">
+        <span class="iconify toast-icon" data-icon="mdi:whatsapp"></span>
+        <span id="toastText">Mensaje copiado al WhatsApp</span>
+    </div>
+
+    <script>
+        // === DATA ===
+        const partsData = [
+            // 14B
+            { category: "14B", engine: "14B", name: "Kit de Juntas Toyota 11B/14B", price: 28.00 },
+            { category: "14B", engine: "14B", name: "Punta de Inyección Toyota 14B", price: 15.00 },
+            { category: "14B", engine: "14B", name: "Tapa de Block Toyota 14B", price: 296.00 },
+            { category: "14B", engine: "14B", name: "Junta Tapa Block Toyota 14B Metal", price: 9.00 },
+            { category: "14B", engine: "14B", name: "JGO Metal Bancada Toyota 13B-14B STD", price: 15.00 },
+            { category: "14B", engine: "14B", name: "JGO Metal Bancada Toyota 13B-14B 0.50", price: 18.00 },
+            { category: "14B", engine: "14B", name: "JGO Aros Toyota 14B STD", price: 35.00 },
+            { category: "14B", engine: "14B", name: "JGO Aros Toyota 14B 0.50", price: 35.00 },
+            { category: "14B", engine: "14B", name: "JGO Pistón Toyota 14B 0.50", price: 60.00 },
+            // 1C
+            { category: "1C", engine: "1C", name: "Junta de Tapa de Block Toyota 1C", price: 6.00 },
+            { category: "1C", engine: "1C", name: "JGO Camisas Toyota 1C", price: 35.00 },
+            { category: "1C", engine: "1C", name: "JGO Anillos (Aros) Toyota 1C 0.50", price: 35.00 },
+            { category: "1C", engine: "1C", name: "JGO Anillos (Aros) Toyota 1C STD", price: 35.00 },
+            { category: "1C", engine: "1C", name: "JGO Pistón Toyota 1C 0.50", price: 60.00 },
+            { category: "1C", engine: "1C/2C", name: "Punta de Inyección Toyota 1C/2C", price: 15.00 },
+            { category: "1C", engine: "1C/2C", name: "JGO Metal Bancada Toyota 1C/2C 0.50", price: 9.00 },
+            { category: "1C", engine: "1C/2C", name: "JGO Metal Bancada Toyota 1C/2C STD", price: 8.00 },
+            { category: "1C", engine: "1C/2C", name: "JGO Metal Biela Toyota 1C/2C 0.50", price: 10.00 },
+            { category: "1C", engine: "1C/2C", name: "Correa de Distribución T 177 Toyota 1C/2C", price: 20.00 },
+            { category: "1C", engine: "1C/2C", name: "Bujía de Precalentamiento Toyota 1C/2C PT 150, 11v", price: 10.00 },
+            // 1HZ
+            { category: "1HZ", engine: "1HZ", name: "Engranaje intermedio No. 1 (Distribución) 1HZ", price: 8.00 },
+            { category: "1HZ", engine: "1HZ", name: "Correa de Distribución 1HZ", price: 20.00 },
+            // 1KZTE
+            { category: "1KZTE", engine: "1KZTE", name: "Arandelas de Traslado 1KZTE (STD)", price: 9.00 },
+            { category: "1KZTE", engine: "1KZTE", name: "JGO Metales de Biela 1KZTE (0.25)", price: 15.00 },
+            // 1NZ
+            { category: "OTROS", engine: "1NZ", name: "Junta Tapa de Block Toyota 1NZ Yaris (Metal)", price: 10.00 },
+            // 2C
+            { category: "2C", engine: "2C", name: "Junta de Tapa de Block Toyota 2C", price: 5.00 },
+            { category: "2C", engine: "2C", name: "JGO Camisas Toyota 2C", price: 35.00 },
+            { category: "2C", engine: "2C", name: "JGO Anillos (Aros) Toyota 2C 0.50", price: 35.00 },
+            { category: "2C", engine: "2C", name: "JGO Pistón Toyota 2C STD", price: 60.00 },
+            { category: "2C", engine: "2C", name: "JGO Pistón Toyota 2C 0.50", price: 60.00 },
+            { category: "2C", engine: "2C", name: "Árbol de Levas Toyota 2C", price: 35.00 },
+            { category: "2C", engine: "2C", name: "Bomba de Aceite Toyota 2C", price: 85.00 },
+            { category: "2C", engine: "2C", name: "Disco de Clutch 212X140X21X29.8 Toyota 2C", price: 15.00 },
+            { category: "2C", engine: "2C", name: "Kit de Juntas Completo Toyota 2C", price: 25.00 },
+            // 2L
+            { category: "2L", engine: "2L", name: "Punta de Inyección Toyota 2L OLD", price: 15.00 },
+            { category: "2L", engine: "2L", name: "Junta Tapa Block Toyota 2L OLD (Non-asbest)", price: 5.00 },
+            { category: "2L", engine: "2L", name: "JGO Camisas Toyota 2L", price: 35.00 },
+            { category: "2L", engine: "2L", name: "JGO Metales de Bancada STD 2L", price: 8.00 },
+            { category: "2L", engine: "2L", name: "JGO Metales de Bancada 0.50 2L", price: 15.00 },
+            { category: "2L", engine: "2L", name: "JGO Aros Toyota 2L STD", price: 35.00 },
+            { category: "2L", engine: "2L", name: "JGO Aros Toyota 2L 0.50", price: 35.00 },
+            { category: "2L", engine: "2L", name: "JGO Metales de Biela STD 2L", price: 10.00 },
+            { category: "2L", engine: "2L", name: "JGO Pistón Toyota 2L STD", price: 60.00 },
+            { category: "2L", engine: "2L", name: "JGO Pistón Toyota 2L 0.50", price: 60.00 },
+            { category: "2L", engine: "2L", name: "Cigüeñal 2L (6 huecos)", price: 115.00 },
+            { category: "2L", engine: "2L", name: "Tensor de la Correa Toyota 2L OLD", price: 8.00 },
+            { category: "2L", engine: "2L", name: "Correa de Distribución T 130 Toyota 2L", price: 20.00 },
+            // 2L-II
+            { category: "2LII", engine: "2L-II", name: "Kit de Juntas Completo Toyota 2L New", price: 25.00 },
+            { category: "2LII", engine: "2L-II", name: "Junta de Tapa de Block Toyota 2L New Metal", price: 9.00 },
+            { category: "2LII", engine: "2L-II", name: "Junta Tapa Block Toyota 2L New Metal", price: 9.00 },
+            { category: "2LII", engine: "2L-II", name: "JGO Pistón Toyota 2L New STD", price: 60.00 },
+            { category: "2LII", engine: "2L-II", name: "JGO Pistón Toyota 2L New 0.50", price: 60.00 },
+            // 2NZ
+            { category: "OTROS", engine: "2NZ", name: "Válvula Escape Toyota 2NZ Yaris (ETY-5612)", price: 4.00 },
+            // 3L
+            { category: "3L", engine: "3L", name: "Junta Tapa de Block Toyota 3L", price: 5.00 },
+            { category: "3L", engine: "3L", name: "JGO Aros Toyota 3L 0.50", price: 35.00 },
+            { category: "3L", engine: "3L", name: "JGO Pistón Toyota 3L STD", price: 60.00 },
+            { category: "3L", engine: "3L", name: "Filtro de Aire Toyota 3L/4Runner 98- (DM-012)", price: 5.00 },
+            { category: "3L", engine: "3L", name: "Disco Clutch Toyota 3L (236X150X29.8)", price: 15.00 },
+            { category: "3L", engine: "3L/5L", name: "Retenedor del Muelle de Válvula 3L/5L", price: 1.00 },
+            { category: "3L", engine: "3L/5L", name: "Deslizante Caja Velocidad Toyota 3L/5L", price: 10.00 },
+            { category: "3L", engine: "3L/5L", name: "Cierre del Retenedor del Muelle de Válvula 3L/5L", price: 2.00 },
+            // 5L
+            { category: "5L", engine: "5L", name: "JGO de Arandelas de Traslado", price: 3.00 },
+            { category: "5L", engine: "5L", name: "Camisas Toyota 5L", price: 35.00 },
+            { category: "5L", engine: "5L", name: "Junta de Tapa de Block Toyota 5L Non-asbestos", price: 5.00 },
+            { category: "5L", engine: "5L", name: "JGO Metal Bancada Toyota 5L STD", price: 15.00 },
+            { category: "5L", engine: "5L", name: "JGO Aros Toyota 5L STD", price: 35.00 },
+            { category: "5L", engine: "5L", name: "JGO Aros Toyota 5L 0.50", price: 35.00 },
+            { category: "5L", engine: "5L", name: "JGO Metal Biela Toyota 5L STD", price: 10.00 },
+            { category: "5L", engine: "5L", name: "JGO Metal Biela Toyota 5L 0.50", price: 15.00 },
+            { category: "5L", engine: "5L", name: "JGO Pistón Toyota 5L STD", price: 60.00 },
+            { category: "5L", engine: "5L", name: "Válvula de Escape Toyota 5L", price: 4.00 },
+            // COASTER
+            { category: "COASTER", engine: "COASTER", name: "Cable de Emergencia No. 1", price: 22.00 },
+            { category: "COASTER", engine: "COASTER", name: "Correa del Alternador", price: 20.00 },
+            // HILUX
+            { category: "HILUX", engine: "HILUX", name: "Extremo Dirección Interior Hilux", price: 8.00 },
+            { category: "HILUX", engine: "HILUX", name: "Calzo de Motor Trasero Toyota Hilux", price: 10.00 },
+            { category: "HILUX", engine: "HILUX", name: "Filtro de Aire Toyota Hilux LN85", price: 45.00 },
+            { category: "HILUX", engine: "HILUX", name: "Filtro de Combustible Hilux LN / Hiace LH", price: 15.00 },
+            { category: "HILUX", engine: "HILUX", name: "Yokis Finos LH Hilux", price: 5.00 },
+            { category: "HILUX", engine: "HILUX", name: "Extremo Dirección Exterior Hilux", price: 8.00 },
+            { category: "HILUX", engine: "HILUX", name: "Parrilla Toyota Hilux 2x4 RN/YN/LN145/155 98- Inf. RH", price: 28.00 },
+            { category: "HILUX", engine: "HILUX", name: "Parrilla Inferior Izquierda LN85 Hilux", price: 28.00 },
+            { category: "HILUX", engine: "HILUX", name: "Barra Central de la Dirección Toyota", price: 30.00 },
+            { category: "HILUX", engine: "HILUX", name: "Farol Delantero Izquierdo Hilux", price: 35.00 },
+            { category: "HILUX", engine: "HILUX", name: "Farol Indicador Delantero Derecho Hilux", price: 35.00 },
+            { category: "HILUX", engine: "HILUX", name: "Farol Indicador Delantero Izquierdo Hilux", price: 35.00 },
+            { category: "HILUX", engine: "HILUX", name: "Motor Limpiaparabrisas Hilux", price: 28.00 },
+            { category: "HILUX", engine: "HILUX", name: "Brazo Aux Dirección Toyota LN80/100 Hilux 2x4", price: 18.00 },
+            // HIACE
+            { category: "HIACE", engine: "HIACE", name: "Jgo Rep. Cilin. Princ. Embrague Toyota Hiace", price: 5.00 },
+            { category: "HIACE", engine: "HIACE", name: "Rep. Bomba Aux. Embrague Toyota Hiace", price: 5.00 },
+            { category: "HIACE", engine: "HIACE", name: "Bandas Trasera LN145 Hiace", price: 20.00 },
+            { category: "HIACE", engine: "HIACE", name: "Brazo Neumático Puerta Trasera Hiace KDH-LH20#/212/222", price: 30.00 },
+            { category: "HIACE", engine: "HIACE", name: "Bandas de Freno Trasero Hiace", price: 35.00 },
+            { category: "HIACE", engine: "HIACE", name: "Parabrisas Delantero Hiace", price: 100.00 },
+            { category: "HIACE", engine: "HIACE", name: "Farol Indicador Delantero Izquierdo Hiace", price: 35.00 },
+            { category: "HIACE", engine: "HIACE", name: "Farol Indicador Delantero Derecho Hiace", price: 35.00 },
+            { category: "HIACE", engine: "HIACE", name: "Farol Trasero Derecho Hiace", price: 35.00 },
+            { category: "HIACE", engine: "HIACE", name: "Evaporador Delantero A/C Hiace", price: 160.00 },
+            { category: "HIACE", engine: "HIACE", name: "Evaporador Interior Trasero A/C Hiace", price: 160.00 },
+            // TERCEL
+            { category: "OTROS", engine: "TERCEL", name: "Disco de Freno Del. Toyota Tercel 94-99", price: 35.00 },
+            { category: "OTROS", engine: "TERCEL", name: "Disco Freno Toyota Tercel EL40/50/53 Del. (BR3290)", price: 435.00 },
+            // TOYOTA GEN
+            { category: "OTROS", engine: "TOYOTA", name: "Manguera Entrada Radiador Toyota", price: 8.00 },
+            { category: "OTROS", engine: "TOYOTA", name: "Manguera Salida Radiador Toyota", price: 8.00 },
+            { category: "OTROS", engine: "TOYOTA", name: "Elemento de Filtro de Aire Toyota (HFKZ165)", price: 8.00 },
+            { category: "OTROS", engine: "TOYOTA", name: "Buje del Brazo Inferior (Parrilla)", price: 2.00 },
+            { category: "OTROS", engine: "TOYOTA", name: "Perno Barra Estabilizadora", price: 5.00 },
+            { category: "OTROS", engine: "TOYOTA", name: "Fan Delantero Toyota", price: 30.00 },
+            { category: "OTROS", engine: "TOYOTA", name: "Fan Trasero Toyota", price: 30.00 },
+            // YARIS
+            { category: "OTROS", engine: "YARIS", name: "Parrilla Toyota Yaris 00-01 RH NPC20", price: 28.00 },
+        ];
+
+        // Category icons and labels
+        const categoryMeta = {
+            "14B": { icon: "mdi:engine", label: "Motor 14B" },
+            "1C": { icon: "mdi:engine", label: "Motor 1C / 1C-2C" },
+            "1HZ": { icon: "mdi:engine", label: "Motor 1HZ" },
+            "1KZTE": { icon: "mdi:engine", label: "Motor 1KZ-TE" },
+            "2C": { icon: "mdi:engine", label: "Motor 2C" },
+            "2L": { icon: "mdi:engine", label: "Motor 2L (OLD)" },
+            "2LII": { icon: "mdi:engine", label: "Motor 2L-II (NEW)" },
+            "3L": { icon: "mdi:engine", label: "Motor 3L / 3L-5L" },
+            "5L": { icon: "mdi:engine", label: "Motor 5L" },
+            "COASTER": { icon: "mdi:bus", label: "Toyota Coaster" },
+            "HILUX": { icon: "mdi:truck", label: "Toyota Hilux" },
+            "HIACE": { icon: "mdi:van-passenger", label: "Toyota Hiace" },
+            "OTROS": { icon: "mdi:car-cog", label: "Otros Modelos (Yaris, Tercel, Genéricos)" },
+        };
+
+        // State
+        let activeFilter = "all";
+        let searchTerm = "";
+
+        // Init
+        document.addEventListener("DOMContentLoaded", () => {
+            // Animate total parts count
+            animateCount("totalParts", partsData.length, 1500);
+            renderCatalog();
+            setupFilters();
+            setupSearch();
+            setupScrollEffect();
+        });
+
+        function animateCount(id, target, duration) {
+            const el = document.getElementById(id);
+            const start = 0;
+            const startTime = performance.now();
+            function update(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                el.textContent = Math.round(start + (target - start) * eased);
+                if (progress < 1) requestAnimationFrame(update);
+            }
+            requestAnimationFrame(update);
+        }
+
+        function renderCatalog() {
+            const container = document.getElementById("catalogContainer");
+            container.innerHTML = "";
+
+            // Group by category
+            const groups = {};
+            partsData.forEach(part => {
+                if (!groups[part.category]) groups[part.category] = [];
+                groups[part.category].push(part);
+            });
+
+            let visibleTotal = 0;
+
+            Object.keys(categoryMeta).forEach(catKey => {
+                if (!groups[catKey]) return;
+
+                const meta = categoryMeta[catKey];
+                const parts = groups[catKey];
+
+                // Filter parts
+                const filteredParts = parts.filter(p => {
+                    const matchFilter = activeFilter === "all" ||
+                        p.category === activeFilter ||
+                        p.engine === activeFilter ||
+                        p.engine.includes(activeFilter) ||
+                        p.name.toUpperCase().includes(activeFilter.toUpperCase());
+
+                    const matchSearch = searchTerm === "" ||
+                        p.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                        p.engine.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                        p.category.toLowerCase().includes(searchTerm.toLowerCase());
+
+                    return matchFilter && matchSearch;
+                });
+
+                if (filteredParts.length === 0) return;
+                visibleTotal += filteredParts.length;
+
+                const section = document.createElement("div");
+                section.className = "category-section";
+                section.setAttribute("data-category", catKey);
+
+                section.innerHTML = `
+                    <div class="category-header" onclick="toggleCategory(this)">
+                        <div class="category-icon">
+                            <span class="iconify" data-icon="${meta.icon}" data-width="22"></span>
+                        </div>
+                        <h2>${meta.label}</h2>
+                        <span class="part-count">${filteredParts.length} piezas</span>
+                        <span class="iconify toggle-icon" data-icon="mdi:chevron-down"></span>
+                    </div>
+                    <div class="parts-grid">
+                        ${filteredParts.map(p => `
+                            <div class="part-card">
+                                <div class="part-info">
+                                    <div class="part-name">${highlightSearch(p.name)}</div>
+                                    <span class="part-engine-tag">${p.engine}</span>
+                                </div>
+                                <div class="part-right">
+                                    <span class="part-price">$${p.price.toFixed(2)}</span>
+                                    <span class="part-price-label">USD</span>
+                                </div>
+                                <a href="https://wa.me/5352643984?text=${encodeURIComponent(`Hola, me interesa: ${p.name} - $${p.price.toFixed(2)} USD (${p.engine})`)}" target="_blank" class="whatsapp-mini" title="Pedir por WhatsApp">
+                                    <span class="iconify" data-icon="mdi:whatsapp"></span>
+                                </a>
+                            </div>
+                        `).join("")}
+                    </div>
+                `;
+
+                container.appendChild(section);
+            });
+
+            // Update count
+            document.getElementById("visibleCount").textContent = visibleTotal;
+
+            // No results
+            const noResults = document.getElementById("noResults");
+            if (visibleTotal === 0) {
+                noResults.classList.add("visible");
+            } else {
+                noResults.classList.remove("visible");
+            }
+        }
+
+        function highlightSearch(text) {
+            if (!searchTerm) return text;
+            const regex = new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+            return text.replace(regex, '<mark style="background:rgba(235,10,30,0.3);color:#fff;border-radius:2px;padding:0 2px;">$1</mark>');
+        }
+
+        function toggleCategory(header) {
+            header.classList.toggle("collapsed");
+            const grid = header.nextElementSibling;
+            if (grid) {
+                if (header.classList.contains("collapsed")) {
+                    grid.style.maxHeight = grid.scrollHeight + "px";
+                    requestAnimationFrame(() => {
+                        grid.classList.add("collapsed");
+                    });
+                } else {
+                    grid.classList.remove("collapsed");
+                    grid.style.maxHeight = grid.scrollHeight + "px";
+                    setTimeout(() => {
+                        grid.style.maxHeight = "none";
+                    }, 400);
+                }
+            }
+        }
+
+        function setupFilters() {
+            const chips = document.querySelectorAll(".filter-chip");
+            chips.forEach(chip => {
+                chip.addEventListener("click", () => {
+                    chips.forEach(c => c.classList.remove("active"));
+                    chip.classList.add("active");
+                    activeFilter = chip.getAttribute("data-filter");
+                    renderCatalog();
+
+                    // Smooth scroll to catalog
+                    document.getElementById("catalogo").scrollIntoView({ behavior: "smooth", block: "start" });
+                });
+            });
+        }
+
+        function setupSearch() {
+            const input = document.getElementById("searchInput");
+            let debounceTimer;
+            input.addEventListener("input", () => {
+                clearTimeout(debounceTimer);
+                debounceTimer = setTimeout(() => {
+                    searchTerm = input.value.trim();
+                    renderCatalog();
+                }, 200);
+            });
+        }
+
+        function setupScrollEffect() {
+            const controls = document.getElementById("controlsSection");
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 100) {
+                    controls.classList.add("scrolled");
+                } else {
+                    controls.classList.remove("scrolled");
+                }
+            });
+        }
+    </script>
+</body>
+</html>
